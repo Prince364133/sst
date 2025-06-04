@@ -538,7 +538,7 @@ h6 {
 .footer {
   color: var(--default-color);
   background-color: var(--background-color);
-  background: url("../img/footer-bg.jpg") center center no-repeat;
+  background: url("../images/footer-bg.jpg") center center no-repeat;
   background-size: cover;
   font-size: 14px;
   text-align: center;
