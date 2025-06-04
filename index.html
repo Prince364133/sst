@@ -703,7 +703,7 @@
   </style>
 
   <script>
-    // Eased animation for counting numbers
+  document.addEventListener('DOMContentLoaded', function () {
     const counters = document.querySelectorAll('.counter');
 
     const options = {
@@ -717,7 +717,7 @@
 
     function animateCounter(counter) {
       const target = +counter.getAttribute('data-target');
-      const duration = 2500; // animation duration in ms
+      const duration = 2500;
       let startTime = null;
 
       function step(timestamp) {
@@ -748,8 +748,9 @@
     counters.forEach(counter => {
       observer.observe(counter);
     });
-  </script>
-</section>
+  });
+</script>
+
 
       
 
