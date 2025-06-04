@@ -949,9 +949,31 @@
                         <div class="error-message"></div>
                         <div class="sent-message" id="responseMessage">Your message has been sent. Thank you!</div>
         
-                       <button type="button" id="submitBtn" onclick="window.location.href='https://forms.gle/xrA2oxiAcvW15rC47';">
+                      <button type="button" id="submitBtn" onclick="window.location.href='https://forms.gle/xrA2oxiAcvW15rC47';" style="
+  background-color: #FFD700; /* Bright yellow */
+  color: black;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+">
   Send Message
 </button>
+
+<script>
+  // Optional: Hover effect using JavaScript (or use CSS class for full styling)
+  const btn = document.getElementById('submitBtn');
+  btn.addEventListener('mouseover', () => {
+    btn.style.backgroundColor = '#FFC300'; // darker yellow on hover
+  });
+  btn.addEventListener('mouseout', () => {
+    btn.style.backgroundColor = '#FFD700';
+  });
+</script>
+
 
                     </div>
                 </div>
