@@ -423,6 +423,193 @@
 
       </div>
 
+<!-- Professional Impact Stats Section -->
+<section class="impact-stats">
+  <div class="container">
+    <h2>Our Impact So Far</h2>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3 class="counter" data-target="12000">0</h3>
+        <p>Students Enrolled</p>
+      </div>
+      <div class="stat-card">
+        <h3 class="counter" data-target="4500">0</h3>
+        <p>Students Placed in Jobs</p>
+      </div>
+      <div class="stat-card">
+        <h3 class="counter" data-target="150">0</h3>
+        <p>Industry Trainers</p>
+      </div>
+      <div class="stat-card">
+        <h3 class="counter" data-target="25000">0</h3>
+        <p>Courses Completed</p>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    /* Container and background */
+    .impact-stats {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      padding: 70px 25px;
+      font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #1a1a1a;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+      border-radius: 20px;
+      max-width: 1150px;
+      margin: 60px auto;
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+    }
+    .impact-stats:hover {
+      box-shadow: 0 18px 48px rgba(0,0,0,0.18);
+    }
+
+    /* Title */
+    .impact-stats h2 {
+      font-size: 40px;
+      margin-bottom: 55px;
+      font-weight: 800;
+      color: #fbb900; /* Brand yellow */
+      letter-spacing: 1.1px;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+    .impact-stats h2::after {
+      content: "";
+      display: block;
+      height: 3px;
+      width: 100px;
+      background: linear-gradient(90deg, #fbb900 0%, #d8a600 100%);
+      border-radius: 5px;
+      margin: 12px auto 0;
+      box-shadow: 0 2px 6px rgba(251,185,0,0.6);
+    }
+
+    /* Grid layout */
+    .stats-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 50px;
+    }
+
+    /* Individual stat cards */
+    .stat-card {
+      flex: 1 1 220px;
+      background: linear-gradient(145deg, rgba(255,255,255,0.35), rgba(255,255,255,0.15));
+      padding: 40px 30px;
+      border-radius: 18px;
+      box-shadow:
+        inset 3px 3px 8px rgba(255,255,255,0.8),
+        inset -3px -3px 8px rgba(0,0,0,0.05),
+        0 6px 14px rgba(0,0,0,0.08);
+      transition: transform 0.35s cubic-bezier(.4,0,.2,1), box-shadow 0.35s ease;
+      cursor: default;
+    }
+    .stat-card:hover {
+      transform: translateY(-12px);
+      box-shadow:
+        inset 3px 3px 12px rgba(255,255,255,0.95),
+        inset -3px -3px 12px rgba(0,0,0,0.08),
+        0 12px 26px rgba(0,0,0,0.15);
+    }
+
+    /* Number styling */
+    .stat-card h3 {
+      font-size: 56px;
+      margin-bottom: 14px;
+      font-weight: 900;
+      color: #c48f00;
+      text-shadow: 0 1px 2px rgba(196,143,0,0.6);
+      letter-spacing: 1px;
+      user-select: none;
+    }
+
+    /* Description */
+    .stat-card p {
+      font-size: 20px;
+      font-weight: 600;
+      color: #333;
+      user-select: none;
+      letter-spacing: 0.03em;
+    }
+
+    /* Responsive */
+    @media (max-width: 800px) {
+      .stats-grid {
+        gap: 35px;
+      }
+      .stat-card {
+        flex: 1 1 260px;
+      }
+    }
+    @media (max-width: 500px) {
+      .stats-grid {
+        flex-direction: column;
+        gap: 30px;
+      }
+      .stat-card {
+        flex: 1 1 100%;
+        max-width: 360px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+
+  <script>
+    // Eased animation for counting numbers
+    const counters = document.querySelectorAll('.counter');
+
+    const options = {
+      root: null,
+      threshold: 0.6,
+    };
+
+    function easeOutQuad(t) {
+      return t * (2 - t);
+    }
+
+    function animateCounter(counter) {
+      const target = +counter.getAttribute('data-target');
+      const duration = 2500; // animation duration in ms
+      let startTime = null;
+
+      function step(timestamp) {
+        if (!startTime) startTime = timestamp;
+        const progress = Math.min((timestamp - startTime) / duration, 1);
+        const easedProgress = easeOutQuad(progress);
+        counter.innerText = Math.floor(easedProgress * target).toLocaleString();
+
+        if (progress < 1) {
+          window.requestAnimationFrame(step);
+        } else {
+          counter.innerText = target.toLocaleString();
+        }
+      }
+
+      window.requestAnimationFrame(step);
+    }
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, options);
+
+    counters.forEach(counter => {
+      observer.observe(counter);
+    });
+  </script>
+</section>
+
+      
 
       <!-- Testimonials Section for SST (No Photos, Stars, Gradient, Animations) -->
 <section style="background: linear-gradient(135deg, #ffffff, #ffffff); padding: 60px 20px; font-family: 'Segoe UI', sans-serif;">
