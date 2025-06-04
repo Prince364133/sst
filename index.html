@@ -454,6 +454,116 @@
   }
 </style>
 
+
+<section class="achievement-section">
+  <div class="achievement-container">
+    <h2 class="achievement-title">🏆 Our Proud Achievement</h2>
+
+    <div class="achievement-card animate-on-scroll">
+      <h3 class="achievement-heading">
+        <span>📢</span> Public Complaint Box Portal Launched by Hon'ble CM of Maharashtra
+      </h3>
+      <p class="achievement-meta">An initiative by <strong>Soft Skill Technology</strong></p>
+      <p class="achievement-desc">
+        The <strong>Public Complaint Box</strong> is an innovative online portal designed to simplify the process of raising public complaints. Officially launched by the Hon'ble Chief Minister of Maharashtra, <strong>Shri Devendraji Fadnavis</strong>, this platform addresses everyday issues faced by citizens—such as traffic signals, electricity problems, and more.
+      </p>
+      <p class="achievement-desc">
+        The primary objective is to connect the public with government departments more efficiently, using the power of smartphones and the internet. Developed by <strong>Soft Skill Technology</strong>, the portal is fully responsive and works on all devices—mobiles, tablets, laptops, and desktops.
+      </p>
+      <p class="achievement-highlight">It serves as a bridge between the people and the respective authorities—making voices heard and solutions delivered.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .achievement-section {
+    padding: 70px 20px;
+    background: #f4f4f4;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .achievement-container {
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .achievement-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c2c2c;
+    margin-bottom: 40px;
+  }
+
+  .achievement-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-in-out;
+  }
+
+  .achievement-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .achievement-heading {
+    font-size: 1.6rem;
+    color: #222;
+    margin-bottom: 10px;
+  }
+
+  .achievement-meta {
+    color: #888;
+    margin-bottom: 20px;
+    font-style: italic;
+  }
+
+  .achievement-desc {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.7;
+  }
+
+  .achievement-highlight {
+    background: #f8f8f8;
+    padding: 12px 20px;
+    border-left: 5px solid #999;
+    border-radius: 6px;
+    font-weight: 500;
+    color: #444;
+  }
+
+  @media (max-width: 600px) {
+    .achievement-title {
+      font-size: 2rem;
+    }
+
+    .achievement-heading {
+      font-size: 1.3rem;
+    }
+  }
+</style>
+
+<script>
+  // Fade-in on scroll effect
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.animate-on-scroll').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+      
       
 <!-- Professional Impact Stats Section -->
 <section class="impact-stats">
