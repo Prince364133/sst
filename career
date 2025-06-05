@@ -1,0 +1,155 @@
+<!-- Career Page Section -->
+<section class="career-section">
+  <div class="container">
+    <h2 class="section-title">Join Our Team</h2>
+
+    <div class="job-listings">
+      <!-- Job Posting 1 -->
+      <div class="job-card">
+        <h3 class="job-title">Frontend Developer</h3>
+        <p class="job-location">Location: Delhi, India</p>
+        <p class="job-type">Type: Full-Time</p>
+        <p class="job-description">
+          We are seeking a skilled Frontend Developer proficient in HTML, CSS, and JavaScript to build responsive web applications.
+        </p>
+        <div class="job-actions">
+          <a href="https://example.com/apply/frontend-developer" class="apply-btn">Apply Now</a>
+          <a href="https://wa.me/919665120206?text=I'm%20interested%20in%20the%20Frontend%20Developer%20position" class="message-btn" target="_blank">Message Now</a>
+        </div>
+      </div>
+
+      <!-- Job Posting 2 -->
+      <div class="job-card">
+        <h3 class="job-title">Backend Developer</h3>
+        <p class="job-location">Location: Mumbai, India</p>
+        <p class="job-type">Type: Full-Time</p>
+        <p class="job-description">
+          Join our backend team to develop robust APIs and services using Node.js and Express.
+        </p>
+        <div class="job-actions">
+          <a href="https://example.com/apply/backend-developer" class="apply-btn">Apply Now</a>
+          <a href="https://wa.me/919665120206?text=I'm%20interested%20in%20the%20Backend%20Developer%20position" class="message-btn" target="_blank">Message Now</a>
+        </div>
+      </div>
+
+      <!-- Job Posting 3 -->
+      <div class="job-card">
+        <h3 class="job-title">UI/UX Designer</h3>
+        <p class="job-location">Location: Remote</p>
+        <p class="job-type">Type: Contract</p>
+        <p class="job-description">
+          Seeking a creative UI/UX Designer to craft intuitive user experiences for our web and mobile applications.
+        </p>
+        <div class="job-actions">
+          <a href="https://example.com/apply/ui-ux-designer" class="apply-btn">Apply Now</a>
+          <a href="https://wa.me/919665120206?text=I'm%20interested%20in%20the%20UI/UX%20Designer%20position" class="message-btn" target="_blank">Message Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Career Section Styles -->
+<style>
+  .career-section {
+    padding: 60px 20px;
+    background-color: #ffffff; /* White background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333; /* Dark gray text */
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #fbb900; /* Brand yellow */
+  }
+
+  .job-listings {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .job-card {
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .job-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #222222;
+  }
+
+  .job-location,
+  .job-type {
+    font-size: 1rem;
+    color: #555555;
+    margin-bottom: 5px;
+  }
+
+  .job-description {
+    font-size: 1rem;
+    color: #444444;
+    margin-bottom: 15px;
+  }
+
+  .job-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .apply-btn,
+  .message-btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+  }
+
+  .apply-btn {
+    background-color: #fbb900; /* Brand yellow */
+  }
+
+  .apply-btn:hover {
+    background-color: #e0a800;
+  }
+
+  .message-btn {
+    background-color: #25d366; /* WhatsApp green */
+  }
+
+  .message-btn:hover {
+    background-color: #1ebe5d;
+  }
+
+  @media (max-width: 768px) {
+    .job-actions {
+      flex-direction: column;
+    }
+
+    .apply-btn,
+    .message-btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>
